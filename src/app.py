@@ -25,12 +25,21 @@ def make_prediction(input):
     st.write('The predicted morphology for this PS/PMMA blend is: ', prediction)    
 
 # Declare a form to receive the variables to input into the model
-form = st.form(key='my_form')
-#sex = form.radio('What is your genre?', ('Male', 'Female'))
-conc=form.number_input(label="Concentration of PS/PMMA Blend (%)", step=0.01, placeholder="0")
-comp=form.number_input(label="Composition(PS/PMMA ratio)", min=0, max=1, step=0.01, placeholder="0")
-pmmawt=form.number_input(label="PMMA Molecular Weight (Da)", step=0.01, placeholder="0")
-ssenergy=form.number_input(label="Subscrate Surface Energy (mJ/m^2)", step=0.01, placeholder="0")
+form = st.form(key='Input values to the model')
+initialtext1="0"
+conc=form.number_input(label="Concentration of PS/PMMA Blend (%)", step=0.01)
+comp=form.number_input(label="Composition(PS/PMMA ratio)", min=0, max=1, step=0.01)
+pmmawt=form.number_input(label="PMMA Molecular Weight (Da)", step=0.01)
+ssenergy=form.number_input(label="Subscrate Surface Energy (mJ/m^2)", step=0.01)
+
+if conc == "":
+    st.write(initialtext1, style="color: lightgray")
+if comp == "":
+    st.write(initialtext1, style="color: lightgray")
+if pmmawt == "":
+    st.write(initialtext1, style="color: lightgray") 
+if ssenergy == "":
+    st.write(initialtext1, style="color: lightgray")    
 
 #Making necessary changes to input
 pmmawt=pmmawt/(10^6)
