@@ -28,7 +28,7 @@ def make_prediction(input):
 form = st.form(key='Input values to the model')
 initialtext1="0"
 conc=form.number_input(label="Concentration of PS/PMMA Blend (%)", step=0.01)
-comp=form.number_input(label="Composition(PS/PMMA ratio)", min=0, max=1, step=0.01)
+comp=form.number_input(label="Composition(PS/PMMA ratio)", step=0.01)
 pmmawt=form.number_input(label="PMMA Molecular Weight (Da)", step=0.01)
 ssenergy=form.number_input(label="Subscrate Surface Energy (mJ/m^2)", step=0.01)
 
