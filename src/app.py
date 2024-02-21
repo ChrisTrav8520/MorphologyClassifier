@@ -11,7 +11,7 @@ st.write('A machine learning model to predict the morphology of a PS/PMMA blend'
 
 #Prediction method
 def make_prediction(values):
-    classifier=joblib.load('./Models/model.joblib')
+    classifier=joblib.load('./Model/model.joblib')
     print("The values you have provided after scaling: ")
     print(values[0])
     print(values[1])
@@ -57,7 +57,7 @@ if submit:
     
 
 
-st.image("https://www.bits-pilani.ac.in/wp-content/uploads/hydbd-chemical-eng.png")
+st.image('./Image/BITS_LOGO.jpg)
 st.caption("This ML model was developed by Bishnu R under the supervision of Professor Arnab Dutta (in collaboration with Professor Nandini Bhandaru) of BITS Pilani, Hyderabad Campus.")
 st.caption("This webapp can be used to predict morphologies of PS/PMMA blends.")
 st.caption("The classes being predicted are - Column, Hole and Island")
