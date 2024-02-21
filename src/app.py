@@ -49,12 +49,13 @@ if ssenergy == "":
 #Making necessary changes to input
 pmmawt=pmmawt/(10^6)
 ssenergy=ssenergy/100
-
+#Submit button
+submit = form.form_submit_button(label='Predict')
 if submit:
     values=[conc,comp,pmmawt,ssenergy]
     make_prediction(values)
     
-submit = form.form_submit_button(label='Predict')
+
 
 st.image("https://www.bits-pilani.ac.in/wp-content/uploads/hydbd-chemical-eng.png")
 st.caption("This ML model was developed by Bishnu R under the supervision of Professor Arnab Dutta (in collaboration with Professor Nandini Bhandaru) of BITS Pilani, Hyderabad Campus.")
