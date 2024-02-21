@@ -7,16 +7,16 @@ warnings.filterwarnings("ignore")
 
 # Setting the app title
 st.title('PS/PMMA Blend Morphology Classifier')
-st.write('A machine learning model to predict the morphology of a PS/PMMA blend')
+st.write('A machine learning model that predicts the morphology of a PS/PMMA blend')
 
 #Prediction method
 def make_prediction(values):
     classifier=joblib.load('./Model/model.joblib')
-    st.write("The values you have provided after scaling: ")
-    st.write(values[0])
-    st.write(values[1])
-    st.write(values[2])
-    st.write(values[3])
+    #st.write("The values you have provided after scaling: ")
+    #st.write(values[0])
+    #st.write(values[1])
+    #st.write(values[2])
+    #st.write(values[3])
     data=pd.DataFrame([values])
     prediction=classifier.predict(data)
     if prediction==0:
@@ -58,15 +58,13 @@ if submit:
 
 
 st.image('./Image/BITS_LOGO.jpg')
-st.write('<span style="font-size:20px;">Thank you for using our model</span>', unsafe_allow_html=True)
-st.write('<span style="font-size:20px;">This ML model was developed by Bishnu R under the supervision of Professor Arnab Dutta (in collaboration with Professor Nandini Bhandaru) of BITS Pilani, Hyderabad Campus.</span>', unsafe_allow_html=True)
-st.write('<span style="font-size:20px;">This webapp can be used to predict morphologies of PS/PMMA blends.The classes being predicted are - Column, Hole and Island</span>', unsafe_allow_html=True)
-st.write('<span style="font-size:20px;">The input requirements are as follows:</span>', unsafe_allow_html=True)
-st.write('<span style="font-size:20px;">The concentration must be input as %</span>', unsafe_allow_html=True)
-st.write('<span style="font-size:20px;">The composition values must lie between 0 and 1</span>', unsafe_allow_html=True)
-st.write('<span style="font-size:20px;">The PMMA molecular weight must be input in the units of Da</span>', unsafe_allow_html=True)
-st.write('<span style="font-size:20px;">This is some text with custom font size.</span>', unsafe_allow_html=True)
-st.write('<span style="font-size:20px;">The subscrate surface energy must be input in the units of mJ/meter squared</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:18px;">Thank you for using our model</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:18px;">Thank you for using our model. This ML model was developed by Bishnu R under the supervision of Professor Arnab Dutta (in collaboration with Professor Nandini Bhandaru) of BITS Pilani, Hyderabad Campus. This webapp can be used to predict morphologies of PS/PMMA blends.The classes being predicted are - Column, Hole and Island</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:18px;">The input requirements are as follows:</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:18px;">1. The concentration must be input as %</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:18px;">2. The composition values must lie between 0 and 1</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:18px;">3. The PMMA molecular weight must be input in the units of Da</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:18px;">4. The subscrate surface energy must be input in the units of mJ/meter squared</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:20px;">This webapp has been developed as a part of academic work. We take no responsibility for any damages that may result from its use.</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:20px;">For any queries, please send an email to - f20201934@hyderabad.bits-pilani.ac.in or arnabdutta@hyderabad.bits-pilani.ac.in</span>', unsafe_allow_html=True)
 
@@ -79,8 +77,6 @@ st.write('<span style="font-size:20px;">For any queries, please send an email to
 #st.caption("The PMMA molecular weight must be input in the units of Da")
 #st.caption("The subscrate surface energy must be input in the units of mJ/meter squared")
 #print("")
-st.caption("This webapp has been developed as a part of academic work. We take no responsibility for any damages that may result from its use.")
-st.caption("For any queries, please send an email to - f20201934@hyderabad.bits-pilani.ac.in arnabdutta@hyderabad.bits-pilani.ac.in")
 
 
 
