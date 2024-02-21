@@ -10,9 +10,14 @@ st.title('PS/PMMA Blend Morphology Classifier')
 st.write('A machine learning model to predict the morphology of a PS/PMMA blend')
 
 #Prediction method
-def make_prediction(input):
+def make_prediction(values):
     classifier=joblib.load('./Models/model.joblib')
-    data=pd.DataFrame(input)
+    print("The values you have provided after scaling: ")
+    print(values[0])
+    print(values[1])
+    print(values[2])
+    print(values[3])
+    data=pd.DataFrame([values])
     prediction=classifier.predict(data)
     if prediction==0:
         prediction='Column'
@@ -45,8 +50,13 @@ if ssenergy == "":
 pmmawt=pmmawt/(10^6)
 ssenergy=ssenergy/100
 
+if submit:
+    values=[conc,comp,pmmawt,ssenergy]
+    make_prediction(values)
+    
 submit = form.form_submit_button(label='Predict')
-st.image("https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.bits-pilani.ac.in/wp-content/uploads/hydbd-chemical-eng.png")
+
+st.image("https://www.bits-pilani.ac.in/wp-content/uploads/hydbd-chemical-eng.png")
 st.caption("This ML model was developed by Bishnu R under the supervision of Professor Arnab Dutta (in collaboration with Professor Nandini Bhandaru) of BITS Pilani, Hyderabad Campus.")
 st.caption("This webapp can be used to predict morphologies of PS/PMMA blends.")
 st.caption("The classes being predicted are - Column, Hole and Island")
@@ -59,6 +69,5 @@ print("")
 st.caption("This webapp has been developed as a part of academic work. We take no responsibility for any damages that may result from its use.")
 st.caption("For any queries, please send an email to - f20201934@hyderabad.bits-pilani.ac.in arnabdutta@hyderabad.bits-pilani.ac.in")
 
-if submit:
-    make_prediction(conc,comp,pmmawt,ssenergy)
+
 
