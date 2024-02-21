@@ -47,7 +47,7 @@ if ssenergy == "":
     st.write(initialtext1, style="color: lightgray")    
 
 #Making necessary changes to input
-pmmawt=pmmawt/(10^6)
+pmmawt=pmmawt/10**6
 ssenergy=ssenergy/100
 #Submit button
 submit = form.form_submit_button(label='Predict')
@@ -58,15 +58,27 @@ if submit:
 
 
 st.image('./Image/BITS_LOGO.jpg')
-st.caption("This ML model was developed by Bishnu R under the supervision of Professor Arnab Dutta (in collaboration with Professor Nandini Bhandaru) of BITS Pilani, Hyderabad Campus.")
-st.caption("This webapp can be used to predict morphologies of PS/PMMA blends.")
-st.caption("The classes being predicted are - Column, Hole and Island")
-st.caption("The input requirements are as follows -")
-st.caption("The concentration must be input as %")
-st.caption("The composition values must lie between 0 and 1 ")
-st.caption("The PMMA molecular weight must be input in the units of Da")
-st.caption("The subscrate surface energy must be input in the units of mJ/meter squared")
-print("")
+st.write('<span style="font-size:20px;">Thank you for using our model</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:20px;">This ML model was developed by Bishnu R under the supervision of Professor Arnab Dutta (in collaboration with Professor Nandini Bhandaru) of BITS Pilani, Hyderabad Campus.</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:20px;">This webapp can be used to predict morphologies of PS/PMMA blends.The classes being predicted are - Column, Hole and Island</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:20px;">The input requirements are as follows:</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:20px;">The concentration must be input as %</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:20px;">The composition values must lie between 0 and 1</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:20px;">The PMMA molecular weight must be input in the units of Da</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:20px;">This is some text with custom font size.</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:20px;">The subscrate surface energy must be input in the units of mJ/meter squared</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:20px;">This webapp has been developed as a part of academic work. We take no responsibility for any damages that may result from its use.</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:20px;">For any queries, please send an email to - f20201934@hyderabad.bits-pilani.ac.in or arnabdutta@hyderabad.bits-pilani.ac.in</span>', unsafe_allow_html=True)
+
+#st.caption("This ML model was developed by Bishnu R under the supervision of Professor Arnab Dutta (in collaboration with Professor Nandini Bhandaru) of BITS Pilani, Hyderabad Campus.")
+#st.caption("This webapp can be used to predict morphologies of PS/PMMA blends.")
+#st.caption("The classes being predicted are - Column, Hole and Island")
+#st.caption("The input requirements are as follows -")
+#st.caption("The concentration must be input as %")
+#st.caption("The composition values must lie between 0 and 1 ")
+#st.caption("The PMMA molecular weight must be input in the units of Da")
+#st.caption("The subscrate surface energy must be input in the units of mJ/meter squared")
+#print("")
 st.caption("This webapp has been developed as a part of academic work. We take no responsibility for any damages that may result from its use.")
 st.caption("For any queries, please send an email to - f20201934@hyderabad.bits-pilani.ac.in arnabdutta@hyderabad.bits-pilani.ac.in")
 
