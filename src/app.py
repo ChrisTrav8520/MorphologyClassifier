@@ -31,7 +31,7 @@ def make_prediction(values):
 
 # Declare a form to receive the variables to input into the model
 form = st.form(key='Input values to the model')
-initialtext1="0"
+initialtext1=0
 conc=form.number_input(label="Concentration of PS/PMMA Blend (%)", step=0.01)
 comp=form.number_input(label="Composition(PS/PMMA ratio)", step=0.01)
 pmmawt=form.number_input(label="PMMA Molecular Weight (Da)", step=0.01)
@@ -53,13 +53,15 @@ ssenergy=ssenergy/100
 submit = form.form_submit_button(label='Predict')
 if submit:
     values=[conc,comp,pmmawt,ssenergy]
-    make_prediction(values)
+    if conc==0 or comp==0 or pmmawt==0 or ssenergy==0:
+        st.write('<span style="font-size:18px;">One or more of the inputs is empty, please enter them</span>', unsafe_allow_html=True)
+    else:
+        make_prediction(values)
     
-
 
 st.image('./Image/BITS_LOGO.jpg')
 st.write('')
-st.write('<span style="font-size:18px;">Thank you for using our model. This ML model was developed by Bishnu R under the supervision of Professor Arnab Dutta (in collaboration with Professor Nandini Bhandaru) of BITS Pilani, Hyderabad Campus. This webapp can be used to predict morphologies of PS/PMMA blends.The classes being predicted are - Column, Hole and Island</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:18px;">Thank you for using our model. This ML model was developed by Bishnu R under the supervision of Professor Arnab Dutta (in collaboration with Professor Nandini Bhandaru) of BITS Pilani, Hyderabad Campus. This webapp can be used to predict morphologies of PS/PMMA blends. The classes being predicted are - Column, Hole and Island.</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:18px;">The input requirements are as follows:</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:18px;">1. The concentration must be input as %</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:18px;">2. The composition values must lie between 0 and 1</span>', unsafe_allow_html=True)
