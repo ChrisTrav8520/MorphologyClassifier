@@ -12,11 +12,11 @@ st.write('A machine learning model to predict the morphology of a PS/PMMA blend'
 #Prediction method
 def make_prediction(values):
     classifier=joblib.load('./Model/model.joblib')
-    print("The values you have provided after scaling: ")
-    print(values[0])
-    print(values[1])
-    print(values[2])
-    print(values[3])
+    st.write("The values you have provided after scaling: ")
+    st.write(values[0])
+    st.write(values[1])
+    st.write(values[2])
+    st.write(values[3])
     data=pd.DataFrame([values])
     prediction=classifier.predict(data)
     if prediction==0:
