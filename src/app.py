@@ -35,7 +35,7 @@ initialtext1=0
 conc=form.number_input(label="Concentration of PS/PMMA Blend (%)", step=0.01)
 comp=form.number_input(label="Composition(PS/PMMA ratio)", step=0.01)
 pmmawt=form.number_input(label="PMMA Molecular Weight (Da)", step=0.01)
-ssenergy=form.number_input(label="Subscrate Surface Energy (mJ/m^2)", step=0.01)
+ssenergy=form.number_input(label="Substrate Surface Energy (mJ/m^2)", step=0.01)
 
 if conc == "":
     st.write(initialtext1, style="color: lightgray")
@@ -66,7 +66,7 @@ st.write('<span style="font-size:18px;">The input requirements are as follows:</
 st.write('<span style="font-size:18px;">1. The concentration must be input as %</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:18px;">2. The composition values must lie between 0 and 1</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:18px;">3. The PMMA molecular weight must be input in the units of Da</span>', unsafe_allow_html=True)
-st.write('<span style="font-size:18px;">4. The subscrate surface energy must be input in the units of mJ/meter squared</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:18px;">4. The substrate surface energy must be input in the units of mJ/meter squared</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:20px;">This webapp has been developed as a part of academic work. We take no responsibility for any damages that may result from its use.</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:20px;">For any queries, please send an email to - f20201934@hyderabad.bits-pilani.ac.in or arnabdutta@hyderabad.bits-pilani.ac.in</span>', unsafe_allow_html=True)
 
