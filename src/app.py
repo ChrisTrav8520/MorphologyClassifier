@@ -60,16 +60,9 @@ if submit:
         make_prediction(values)
     
 
-st.markdown("""
-    <style>
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
-""", unsafe_allow_html=True)
-st.image('./Image/BITS_LOGO.jpg')
+left_column, center_column, right_column = st.columns(3)
+with center_column:
+    st.image('./Image/BITS_LOGO.jpg')
 st.write('')
 st.write('<span style="font-size:18px;">Thank you for using our model. This ML model was developed by Bishnu R under the supervision of Professor Arnab Dutta (in collaboration with Professor Nandini Bhandaru) of BITS Pilani, Hyderabad Campus. This webapp can be used to predict morphologies of PS/PMMA blends. The classes being predicted are - Column, Hole and Island.</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:18px;">Kindly ensure that all feature values are positive. The input requirements for the features are as follows:</span>', unsafe_allow_html=True)
