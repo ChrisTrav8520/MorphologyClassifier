@@ -33,7 +33,7 @@ def make_prediction(values):
 form = st.form(key='Input values to the model')
 initialtext1=0
 conc=form.number_input(label="Concentration of PS/PMMA Blend (%)", step=0.01)
-comp=form.number_input(label="Composition(PS/PMMA ratio)", step=0.01)
+comp=form.number_input(label="Weight Fraction of PS", step=0.01)
 pmmawt=form.number_input(label="PMMA Molecular Weight (Da)", step=0.01)
 ssenergy=form.number_input(label="Substrate Surface Energy (mJ/m^2)", step=0.01)
 
@@ -49,6 +49,7 @@ if ssenergy == "":
 #Making necessary changes to input
 pmmawt=pmmawt/10**6
 ssenergy=ssenergy/100
+
 #Submit button
 submit = form.form_submit_button(label='Predict')
 if submit:
@@ -59,12 +60,24 @@ if submit:
         make_prediction(values)
     
 
-st.image('./Image/BITS_LOGO.jpg')
+st.markdown(
+    """
+    <style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    </style>
+    <img src="./Image/BITS_LOGO.jpg" class="center" />
+    """,
+    unsafe_allow_html=True
+)
 st.write('')
 st.write('<span style="font-size:18px;">Thank you for using our model. This ML model was developed by Bishnu R under the supervision of Professor Arnab Dutta (in collaboration with Professor Nandini Bhandaru) of BITS Pilani, Hyderabad Campus. This webapp can be used to predict morphologies of PS/PMMA blends. The classes being predicted are - Column, Hole and Island.</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:18px;">The input requirements are as follows:</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:18px;">1. The concentration must be input as %</span>', unsafe_allow_html=True)
-st.write('<span style="font-size:18px;">2. The composition values must lie between 0 and 1</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:18px;">2. The weight fraction of PS must lie between 0 and 1 as it is a ratio</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:18px;">3. The PMMA molecular weight must be input in the units of Da</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:18px;">4. The substrate surface energy must be input in the units of mJ/meter squared</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:20px;">This webapp has been developed as a part of academic work. We take no responsibility for any damages that may result from its use.</span>', unsafe_allow_html=True)
