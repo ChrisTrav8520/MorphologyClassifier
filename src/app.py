@@ -65,6 +65,7 @@ with center_column:
     st.image('./Image/BITS_LOGO.jpg')
 st.write('')
 st.write('<span style="font-size:18px;">Thank you for using our model. This ML model was developed by Bishnu R under the supervision of Professor Arnab Dutta (in collaboration with Professor Nandini Bhandaru) of BITS Pilani, Hyderabad Campus. This webapp can be used to predict morphologies of PS/PMMA blends. The classes being predicted are - Column, Hole and Island.</span>', unsafe_allow_html=True)
+st.write('<span style="font-size:18px;">Link to the published research article: <a href="https://doi.org/10.1039/D5SM00335K" target="_blank">https://doi.org/10.1039/D5SM00335K</a></span>', unsafe_allow_html=True)
 st.write('<span style="font-size:18px;">Kindly ensure that all feature values are positive. The input requirements for the features are as follows:</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:18px;">1. The concentration must be input as %</span>', unsafe_allow_html=True)
 st.write('<span style="font-size:18px;">2. The weight fraction of PS must lie between 0 and 1 as it is a ratio</span>', unsafe_allow_html=True)
