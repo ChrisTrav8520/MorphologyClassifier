@@ -1,5 +1,5 @@
 ## Machine Learning Framework for predicting morphologies of PS/PMMA blends
-This repository information pertaining to our study published in Soft Matter (RSC, 2025):
+This repository contains information pertaining to our study published in Soft Matter (RSC, 2025):
 https://pubs.rsc.org/en/content/articlelanding/2025/sm/d5sm00335k.
 
 ## Overview
@@ -19,5 +19,6 @@ The objective of this work is to assist experimental polymer scientists in ident
  - SHAP for X-AI
  - Streamlit for webapp front-end development
    
+Model development code is proprietary and available upon request at the discretion of the authors.
 For questions or collaborations, feel free to reach out via email (bishnuramachandran@gmail.com) or open an issue.
 Thank you!
