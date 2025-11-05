@@ -5,4 +5,6 @@ We have employed SHAP, an explainable ML technique, to lend credibility to the m
 
 Kindly visit https://morphology-prediction-tool.onrender.com/ to use the tool - we have mentioned more about the work and the input features in the website.
 
+Update: The work has been published and is accessible at https://pubs.rsc.org/en/content/articlelanding/2025/sm/d5sm00335k.
+
 Thank you!
