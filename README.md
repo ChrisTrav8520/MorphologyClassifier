@@ -1,10 +1,23 @@
-# MorphologyClassifier
-An SVM Based Classification Model that predicts the morphology of a PS/PMMA blend based on the input features.
-The model was developed on a limited point dataset, with the hopes that it will help experimentalists in setting up controlled experiments in the future.
-We have employed SHAP, an explainable ML technique, to lend credibility to the model by aligning with established literature on the field.
+## Machine Learning Framework for predicting morphologies of PS/PMMA blends
+This repository information pertaining to our study published in Soft Matter (RSC, 2025):
+https://pubs.rsc.org/en/content/articlelanding/2025/sm/d5sm00335k.
 
-Kindly visit https://morphology-prediction-tool.onrender.com/ to use the tool - we have mentioned more about the work and the input features in the website.
+## Overview
+As part of the study, we developed a support vector machine (SVM)-based non-linear classification model that predicts the morphology of polystyrene (PS) / polymethyl methacrylate (PMMA) blends from key experimental input parameters.
 
-Update: The work has been published and is accessible at https://pubs.rsc.org/en/content/articlelanding/2025/sm/d5sm00335k.
+The objective of this work is to assist experimental polymer scientists in identifying processing conditions that lead to desired blend morphologies, even when data availability is limited.
 
+## Highlights
+ - Dataset Curation: Manually classified morphologies from AFM images by utilizing Gwyddion
+ - Data-efficient Modelling: Trained and validated multiple algorithms on a limited dataset, demonstrating robust performance inspite of data scarcity
+ - Explainable ML: Applied SHAP (SHapley Additive exPlanations) to interpret the model results and verify alignment with established polymer physics trends
+ - Web-based Prediction Tool: Developed a web application for real-time morphology prediction, to promote democratization of AI (please visit [https://morphology-prediction-tool.onrender.com/](https://morphology-prediction-tool.onrender.com/))
+
+## Tools and Libraries
+ - Python libraries (pandas, numpy, matplotlib.pyplot) for data preprocessing and imputation
+ - scikit-learn, joblib for classification algorithms
+ - SHAP for X-AI
+ - Streamlit for webapp front-end development
+   
+For questions or collaborations, feel free to reach out via email (bishnuramachandran@gmail.com) or open an issue.
 Thank you!
